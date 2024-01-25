@@ -14,6 +14,7 @@ int demo_corner_detector(int argc, char* argv[]); // lab 4
 int demo_feature_descriptor(int argc, char* argv[]); // lab 5
 int demo_feature_matching(int argc, char* argv[]); // lab 6
 int demo_image_stitching(int argc, char* argv[]); // lab 7
+int demo_qr_code_scanner(int argc, char* argv[]); // QR-Code Scanner
 
 int main(int argc, char* argv[])
 {
@@ -35,6 +36,8 @@ int main(int argc, char* argv[])
     putText("Press 5 for Lab 5 Demo (feature descriptor)");
     putText("Press 6 for Lab 6 Demo (feature matching)");
     putText("Press 7 for Lab 7 Demo (image stitching)");
+    putText("--------------------------------------------");
+    putText("Press Q for QR-Code Scanner");
     putText("--------------------------------------------");
     putText("Press M for markup video file (course project tool)");
 
@@ -66,6 +69,10 @@ int main(int argc, char* argv[])
                 break;
             case '7':
                 demo_image_stitching(argc, argv);
+                break;
+            case 'Q':
+            case 'q':
+                demo_qr_code_scanner(argc, argv);
                 break;
             case 'M':
             case 'm':
